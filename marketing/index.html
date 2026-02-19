@@ -26,7 +26,12 @@
         <a href="#workflow">Workflow</a>
         <a href="#screens">Screens</a>
       </nav>
-      <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn btn-sm" target="_blank" rel="noopener">Download</a>
+      <div class="header-cta">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+        </button>
+        <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn btn-sm" target="_blank" rel="noopener">Download</a>
+      </div>
     </div>
   </header>
 
@@ -53,7 +58,7 @@
           </div>
         </div>
         <figure class="hero-art" aria-hidden="true">
-          <img src="pottery header image_updated@2x.png" alt="" width="1230" height="1104" />
+          <img id="hero-image" src="pottery header image_updated@2x.png" data-light-src="pottery header image_updated@2x.png" data-dark-src="dark mode pottery header image_updated@2x.png" alt="" width="1230" height="1104" />
         </figure>
       </div>
     </section>
@@ -140,6 +145,70 @@
   </footer>
 
   <script>
+    const THEME_STORAGE_KEY = "pottery-theme";
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeToggleIcon = themeToggle?.querySelector(".theme-toggle-icon");
+    const heroImage = document.getElementById("hero-image");
+    const mediaDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const getStoredTheme = () => localStorage.getItem(THEME_STORAGE_KEY);
+    const getSystemTheme = () => (mediaDark.matches ? "dark" : "light");
+    const getActiveTheme = () => root.dataset.theme || getSystemTheme();
+
+    const syncHeroImage = (theme) => {
+      if (!heroImage) return;
+      const nextSrc = theme === "dark" ? heroImage.dataset.darkSrc : heroImage.dataset.lightSrc;
+      if (nextSrc && heroImage.getAttribute("src") !== nextSrc) {
+        heroImage.setAttribute("src", nextSrc);
+      }
+    };
+
+    const syncThemeUI = (theme) => {
+      if (!themeToggle || !themeToggleIcon) return;
+      const isDark = theme === "dark";
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      themeToggleIcon.textContent = isDark ? "☾" : "☀";
+    };
+
+    const animateThemeTransition = () => {
+      root.classList.add("theme-transition");
+      window.setTimeout(() => root.classList.remove("theme-transition"), 420);
+    };
+
+    const applyTheme = (theme) => {
+      if (theme === "dark" || theme === "light") {
+        root.dataset.theme = theme;
+      } else {
+        delete root.dataset.theme;
+      }
+      const active = getActiveTheme();
+      syncThemeUI(active);
+      syncHeroImage(active);
+    };
+
+    applyTheme(getStoredTheme());
+
+    const handleSystemThemeChange = () => {
+      if (!getStoredTheme()) {
+        applyTheme(null);
+      }
+    };
+
+    if (typeof mediaDark.addEventListener === "function") {
+      mediaDark.addEventListener("change", handleSystemThemeChange);
+    } else if (typeof mediaDark.addListener === "function") {
+      mediaDark.addListener(handleSystemThemeChange);
+    }
+
+    themeToggle?.addEventListener("click", () => {
+      const nextTheme = getActiveTheme() === "dark" ? "light" : "dark";
+      animateThemeTransition();
+      localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      applyTheme(nextTheme);
+    });
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const observer = new IntersectionObserver((entries) => {
