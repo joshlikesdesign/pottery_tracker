@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pottery Tracker helps ceramic artists track every piece from throw to finished with photos, statuses, and studio-ready organization." />
+  <title>Pottery Tracker | The Ceramic Workflow App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-a" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Pottery Tracker</a>
+      <nav class="header-nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#screens">Screens</a>
+      </nav>
+      <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn btn-sm" target="_blank" rel="noopener">Download</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container reveal">
+      <p class="eyebrow">Made for potters, not spreadsheets</p>
+      <h1>Track Every Piece, From Wet Clay to Finished Work.</h1>
+      <p class="hero-copy">
+        Capture photos, update statuses, and keep your studio flow clear in seconds.
+        Pottery Tracker helps you stay focused on making, not searching for notes.
+      </p>
+      <div class="hero-actions">
+        <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn" target="_blank" rel="noopener">Download on the App Store</a>
+        <a href="#screens" class="btn btn-ghost">See Screens</a>
+      </div>
+      <div class="hero-pills" role="list" aria-label="Key benefits">
+        <span role="listitem">No account required</span>
+        <span role="listitem">Local-first privacy</span>
+        <span role="listitem">Built for iPhone & iPad</span>
+      </div>
+    </section>
+
+    <section id="features" class="container section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Why it works</p>
+        <h2>A studio system that moves at your pace</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="card">
+          <h3>Photo-First History</h3>
+          <p>Every update can include photos, so each piece has a visual timeline you can trust.</p>
+        </article>
+        <article class="card">
+          <h3>Status Workflow</h3>
+          <p>Move from thrown to finished with custom statuses built around your real process.</p>
+        </article>
+        <article class="card">
+          <h3>Smart Filters</h3>
+          <p>Find by status, glaze, clay, batches, or completion without digging through notes.</p>
+        </article>
+        <article class="card">
+          <h3>Calendar + Timeline</h3>
+          <p>Know what happened when and what needs attention next, at a glance.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="container section reveal">
+      <div class="section-head">
+        <p class="eyebrow">Studio flow</p>
+        <h2>From first throw to shelf-ready</h2>
+      </div>
+      <ol class="workflow" aria-label="Typical workflow stages">
+        <li><span>1</span>Capture a new piece with camera or library.</li>
+        <li><span>2</span>Set status, notes, clay body, and glaze tags.</li>
+        <li><span>3</span>Add photos as each stage evolves.</li>
+        <li><span>4</span>Archive completed work with full history intact.</li>
+      </ol>
+    </section>
+
+    <section id="screens" class="section section-screens reveal">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Inside the app</p>
+          <h2>See Pottery Tracker in action</h2>
+        </div>
+        <div class="screen-grid">
+          <figure class="screen-card">
+            <img src="screenshots/screenshot-home-summary.png" alt="Home dashboard with active pieces, needs action, and recent pieces" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Home summary screenshot placeholder';" />
+            <figcaption>Home Summary</figcaption>
+          </figure>
+          <figure class="screen-card">
+            <img src="screenshots/screenshot-pieces-grid.png" alt="Pieces gallery with sort controls, trim urgency labels, and status badges" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Pieces grid screenshot placeholder';" />
+            <figcaption>Pieces Grid</figcaption>
+          </figure>
+          <figure class="screen-card">
+            <img src="screenshots/screenshot-activity-calendar.png" alt="Activity month calendar showing daily piece thumbnails and counts" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Activity calendar screenshot placeholder';" />
+            <figcaption>Activity Calendar</figcaption>
+          </figure>
+          <figure class="screen-card">
+            <img src="screenshots/screenshot-completed-grid.png" alt="Completed tab with glaze stats and finished-piece archive grid" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Completed grid screenshot placeholder';" />
+            <figcaption>Completed Archive</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section cta reveal">
+      <h2>Track your next firing cycle with less stress.</h2>
+      <p>Pottery Tracker keeps your process organized so your attention stays on making better work.</p>
+      <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn" target="_blank" rel="noopener">Download on the App Store</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Pottery Tracker</p>
+      <p>Private by design. Your data stays on your device.</p>
+      <p>© <span id="year"></span> Pottery Tracker</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
