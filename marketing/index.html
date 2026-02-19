@@ -17,7 +17,10 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="logo">Pottery Tracker</a>
+      <a href="#top" class="logo">
+        <img src="logo.png" alt="Pottery Tracker logo" width="599" height="743" />
+        <span>Pottery Tracker</span>
+      </a>
       <nav class="header-nav" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#workflow">Workflow</a>
@@ -29,20 +32,29 @@
 
   <main id="top">
     <section class="hero container reveal">
-      <p class="eyebrow">Made for potters, not spreadsheets</p>
-      <h1>Track Every Piece, From Wet Clay to Finished Work.</h1>
-      <p class="hero-copy">
-        Capture photos, update statuses, and keep your studio flow clear in seconds.
-        Pottery Tracker helps you stay focused on making, not searching for notes.
-      </p>
-      <div class="hero-actions">
-        <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn" target="_blank" rel="noopener">Download on the App Store</a>
-        <a href="#screens" class="btn btn-ghost">See Screens</a>
-      </div>
-      <div class="hero-pills" role="list" aria-label="Key benefits">
-        <span role="listitem">No account required</span>
-        <span role="listitem">Private by design</span>
-        <span role="listitem">Built for iPhone & iPad</span>
+      <div class="hero-layout">
+        <div class="hero-copy-wrap">
+          <p class="eyebrow">Made for potters, by a potter</p>
+          <h1>Track Every Piece, From Wet Clay to Finished Work.</h1>
+          <p class="hero-copy">
+            Capture photos, update statuses, and keep your studio flow clear in seconds.
+            Pottery Tracker helps you stay focused on making, not searching for notes.
+          </p>
+          <div class="hero-actions">
+            <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="app-store-link app-store-link-hero" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <img class="app-store-badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+            </a>
+            <a href="#screens" class="btn btn-ghost">See Screens</a>
+          </div>
+          <div class="hero-pills" role="list" aria-label="Key benefits">
+            <span role="listitem">No account required</span>
+            <span role="listitem">Private by design</span>
+            <span role="listitem">Built for iPhone & iPad</span>
+          </div>
+        </div>
+        <figure class="hero-art" aria-hidden="true">
+          <img src="screenshots/pottery header image.png" alt="" width="1200" height="1076" />
+        </figure>
       </div>
     </section>
 
@@ -112,7 +124,7 @@
     </section>
 
     <section class="container section cta reveal">
-      <h2>Track your next firing cycle with less stress.</h2>
+      <h2>Track your next studio visit with less stress.</h2>
       <p>Pottery Tracker keeps your process organized so your attention stays on making better work.</p>
       <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn" target="_blank" rel="noopener">Download on the App Store</a>
     </section>
@@ -122,6 +134,7 @@
     <div class="container footer-inner">
       <p>Pottery Tracker</p>
       <p>Private by design. Your data stays on your device.</p>
+      <p>Made by <a href="https://josh.computer" target="_blank" rel="noopener">Josh Wilburne</a></p>
       <p>© <span id="year"></span> Pottery Tracker</p>
     </div>
   </footer>
