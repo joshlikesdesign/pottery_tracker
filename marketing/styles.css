@@ -275,6 +275,13 @@ h3 {
   margin-top: 1.6rem;
 }
 
+.hero-platform-note {
+  margin: 0;
+  align-self: center;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
 .hero-pills {
   display: flex;
   flex-wrap: wrap;
