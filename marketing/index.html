@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Pottery Tracker keeps you organized in busy shared studios so you always know what you made, where it is, and what to do next." />
   <title>Pottery Tracker | The Ceramic Workflow App</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pottery Tracker | The Ceramic Workflow App" />
+  <meta property="og:description" content="Never lose track of your pots. Pottery Tracker keeps you organized in busy shared studios so you always know what you made, where it is, and what to do next." />
+  <!-- Update og:url and og:image to absolute URLs before deploying -->
+  <!-- <meta property="og:url" content="https://your-domain.com/" /> -->
+  <!-- <meta property="og:image" content="https://your-domain.com/pottery header image_updated@2x.png" /> -->
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pottery Tracker | The Ceramic Workflow App" />
+  <meta name="twitter:description" content="Never lose track of your pots. Track pieces from first throw to finished shelf." />
+
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
@@ -24,16 +38,17 @@
         <img src="logo.png" alt="Pottery Tracker logo" width="599" height="743" />
         <span>Pottery Tracker</span>
       </a>
-      <nav class="header-nav" aria-label="Primary">
+      <nav class="header-nav" id="primary-nav" aria-label="Primary">
         <a href="#features">Features</a>
         <a href="#workflow">Workflow</a>
         <a href="#screens">Screens</a>
       </nav>
       <div class="header-cta">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
           <span class="theme-toggle-icon" aria-hidden="true">◐</span>
         </button>
-        <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn btn-sm" target="_blank" rel="noopener">Download</a>
+        <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn btn-sm" target="_blank" rel="noopener">Download free</a>
       </div>
     </div>
   </header>
@@ -47,19 +62,23 @@
             Pottery Tracker keeps you organized in busy studios so you always know what you made, where it is, and what to do next.
             Capture photos, update stages, and stay focused on making instead of searching.
           </p>
-          <p class="eyebrow eyebrow-spaced-top">Made for potters, by a potter</p>
           <div class="hero-actions">
-            <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="app-store-link app-store-link-hero" target="_blank" rel="noopener" aria-label="Download on the App Store">
-              <img class="app-store-badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
-            </a>
-            <p class="hero-platform-note">Android coming soon</p>
-            <a href="#workflow" class="btn btn-ghost">See how it works</a>
+            <div class="hero-cta-row">
+              <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="app-store-link app-store-link-hero" target="_blank" rel="noopener" aria-label="Download Pottery Tracker free on the App Store">
+                <img class="app-store-badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+              </a>
+              <a href="#workflow" class="btn btn-ghost btn-ghost-hero">See how it works</a>
+            </div>
+            <p class="hero-free-note">Free to download &middot; iPhone &amp; iPad &middot; Android coming soon</p>
           </div>
           <div class="hero-pills" role="list" aria-label="Key benefits">
-            <span role="listitem">No account required</span>
+            <span role="listitem">No Pottery Tracker account</span>
+            <span class="pill-sep" aria-hidden="true">|</span>
             <span role="listitem">Private by design</span>
+            <span class="pill-sep" aria-hidden="true">|</span>
             <span role="listitem">Built for shared studios</span>
           </div>
+          <p class="maker-note">Made for potters, by a potter</p>
         </div>
         <figure class="hero-art" aria-hidden="true">
           <img id="hero-image" src="pottery header image_updated@2x.png" data-light-src="pottery header image_updated@2x.png" data-dark-src="dark mode pottery header image_updated@2x.png" alt="" width="1230" height="1104" />
@@ -76,18 +95,45 @@
       </div>
       <div class="feature-grid">
         <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
           <h3>Photo-First History</h3>
           <p>Every piece builds a visual timeline you can trust. Quickly scan shelves and recognize your work.</p>
         </article>
         <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="17 1 21 5 17 9"/>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+              <polyline points="7 23 3 19 7 15"/>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+            </svg>
+          </div>
           <h3>Status Workflow</h3>
           <p>Move from thrown to finished using stages that match how you actually work.</p>
         </article>
         <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+            </svg>
+          </div>
           <h3>Smart Filters</h3>
           <p>Find pieces instantly by status, glaze, clay, batch, or completion.</p>
         </article>
         <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
           <h3>Calendar + Timeline</h3>
           <p>See what needs attention and what fired recently at a glance.</p>
         </article>
@@ -116,19 +162,19 @@
         <div class="screen-grid">
           <figure class="screen-card">
             <img src="screenshots/screenshot-home-summary.png" alt="Home dashboard with active pieces, needs action, and recent pieces" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Home summary screenshot placeholder';" />
-            <figcaption>Home Summary</figcaption>
+            <figcaption>See what needs attention today</figcaption>
           </figure>
           <figure class="screen-card">
             <img src="screenshots/screenshot-pieces-grid.png" alt="Pieces gallery with sort controls, trim urgency labels, and status badges" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Pieces grid screenshot placeholder';" />
-            <figcaption>Pieces Grid</figcaption>
+            <figcaption>Your whole studio, one scroll away</figcaption>
           </figure>
           <figure class="screen-card">
             <img src="screenshots/screenshot-activity-calendar.png" alt="Activity month calendar showing daily piece thumbnails and counts" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Activity calendar screenshot placeholder';" />
-            <figcaption>Activity Calendar</figcaption>
+            <figcaption>Track your output over time</figcaption>
           </figure>
           <figure class="screen-card">
             <img src="screenshots/screenshot-completed-grid.png" alt="Completed tab with glaze stats and finished-piece archive grid" width="390" height="844" onerror="this.src='screenshots/placeholder.svg';this.alt='Completed grid screenshot placeholder';" />
-            <figcaption>Completed Archive</figcaption>
+            <figcaption>A permanent record of finished work</figcaption>
           </figure>
         </div>
       </div>
@@ -137,16 +183,24 @@
     <section class="container section cta reveal">
       <h2>Walk into the studio knowing exactly what needs attention.</h2>
       <p>No searching.<br />No guessing.<br />No forgotten pieces.<br />Just better flow and better work.</p>
-      <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="btn" target="_blank" rel="noopener">Download on the App Store</a>
+      <div class="cta-actions">
+        <a href="https://apps.apple.com/us/app/pottery-tracker/id6758213839" class="app-store-link" target="_blank" rel="noopener" aria-label="Download Pottery Tracker free on the App Store">
+          <img class="app-store-badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+        </a>
+        <p class="cta-free-note">Free on the App Store &middot; Android coming soon</p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Pottery Tracker</p>
-      <p>Private by design. Your data stays on your device.<br />No accounts. No cloud. No tracking.</p>
+      <div class="footer-brand">
+        <img src="logo.png" alt="" width="599" height="743" class="footer-logo" aria-hidden="true" />
+        <strong>Pottery Tracker</strong>
+      </div>
+      <p>Private by design. Your studio data stays on your device by default &mdash; no Pottery Tracker account and no servers we run.<br />Pro can turn on optional sync across your Apple devices with iCloud (Apple&rsquo;s systems, not ours). No ads, no tracking.</p>
       <p>Made by <a href="https://josh.computer" target="_blank" rel="noopener">Josh Wilburne</a></p>
-      <p>© <span id="year"></span> Pottery Tracker</p>
+      <p>© <span id="year">2026</span> Pottery Tracker</p>
     </div>
   </footer>
 
@@ -216,6 +270,25 @@
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const primaryNav = document.getElementById("primary-nav");
+
+    menuToggle?.addEventListener("click", () => {
+      const isOpen = primaryNav.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    primaryNav?.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        primaryNav.classList.remove("is-open");
+        menuToggle?.setAttribute("aria-expanded", "false");
+        menuToggle?.setAttribute("aria-label", "Open navigation");
+        if (menuToggle) menuToggle.textContent = "☰";
+      });
+    });
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
