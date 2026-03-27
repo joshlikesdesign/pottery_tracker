@@ -58,10 +58,10 @@ Working doc for web and cross-channel Pro messaging. Update when App Store prici
 
 ## Ship checklist
 
-- [x] `#pro` section on `marketing/index.html` (highlights, feature list, pricing, CTA)
+- [x] `#pro` on `marketing/index.html` — single panel: short headline, chip row, price + CTA + one fine-print line
 - [x] Nav link + meta/og description mention Pro
-- [ ] Optional: dedicated Pro screenshots (`screenshots/screenshot-analytics.png`, kiln log, etc.) in a second row
-- [ ] Re-read yearly trial + subscription legal copy after App Store review feedback
+- [ ] Optional: Pro screenshots in-page or App Store preview assets
+- [ ] Re-read subscription legal copy after App Store / counsel review
 
 ---
 
